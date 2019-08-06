@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_155443) do
+ActiveRecord::Schema.define(version: 2019_08_06_160339) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2019_08_06_155443) do
     t.integer "state_cd"
     t.datetime "start_at"
     t.datetime "end_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.integer "questionnaire_id", null: false
+    t.string "text", null: false
+    t.integer "type_cd", null: false
+    t.boolean "required", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

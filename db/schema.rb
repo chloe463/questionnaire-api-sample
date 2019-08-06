@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_160339) do
+ActiveRecord::Schema.define(version: 2019_08_06_161033) do
+
+  create_table "options", force: :cascade do |t|
+    t.integer "question_id", null: false
+    t.string "text", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "title"

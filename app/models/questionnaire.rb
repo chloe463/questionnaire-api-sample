@@ -13,4 +13,9 @@
 #
 
 class Questionnaire < ApplicationRecord
+  has_many :questions
+  has_many :options, through: :questions
+
+  STATES = [:draft, :published, :closed].freeze
+  as_enum :state, STATES
 end

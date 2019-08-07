@@ -3,7 +3,11 @@ class OptionsController < ApplicationController
 
   # GET /options
   def index
-    @options = Option.all
+    if params[:question_id].present?
+      @options = Option.where(question_id: params[:question_id])
+    else
+      @options = Option.all
+    end
 
     render json: @options
   end

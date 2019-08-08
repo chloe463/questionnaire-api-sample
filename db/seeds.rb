@@ -10,7 +10,7 @@
   questionnaire = Questionnaire.create({
     title: "Questionnaire.#{questionnaire_id}",
     description: "This is a suvey for ...",
-    state_cd: 1,
+    state: (questionnaire_id % 2 == 1) ? :published : :draft,
     start_at: Date.new(2019, 8, 1),
     end_at: Date.new(2020, 8, 1),
   })

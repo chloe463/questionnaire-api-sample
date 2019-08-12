@@ -9,7 +9,7 @@
 (1..10).each do |questionnaire_id|
   questionnaire = Questionnaire.create({
     title: "Questionnaire.#{questionnaire_id}",
-    description: "This is a suvey for ...",
+    description: "This is a survey for ...",
     state: (questionnaire_id % 2 == 1) ? :published : :draft,
     start_at: Date.new(2019, 8, 1),
     end_at: Date.new(2020, 8, 1),

@@ -14,4 +14,7 @@
 class Question < ApplicationRecord
   belongs_to :questionnaire
   has_many :options
+
+  TYPES = [:radio, :checkbox, :select, :text].freeze
+  as_enum :type, TYPES
 end

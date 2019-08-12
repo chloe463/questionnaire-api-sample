@@ -10,6 +10,6 @@
 #
 
 class Option < ApplicationRecord
-  belongs_to :questionnaire
   belongs_to :question
+  delegate :questionnaire, to: :question
 end

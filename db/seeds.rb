@@ -17,15 +17,16 @@
 
   (1..10).each do |question_id|
     question = Question.create({
-      questionnaire_id: questionnaire.id,
+      questionnaire: questionnaire,
       text: "Question.#{question_id}",
-      type_cd: question_id % 4,
+      type_cd: (question_id % 4 != 0) ? question_id % 4 : 4,
       required: true,
     })
+    p question
 
     (1..4).each do |option_id|
-      option = Option.create({
-        question_id: question.id,
+      option = Option.create!({
+        question: question,
         text: "Option.#{option_id}",
       })
     end

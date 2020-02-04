@@ -5,6 +5,8 @@ class OptionsController < ApplicationController
   def index
     if params[:question_id].present?
       @options = Option.where(question_id: params[:question_id])
+    elsif params[:question_ids].present?
+      @options = Option.where(question_id: params[:question_ids])
     else
       @options = Option.all
     end

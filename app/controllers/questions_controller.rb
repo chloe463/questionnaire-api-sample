@@ -5,6 +5,8 @@ class QuestionsController < ApplicationController
   def index
     if params[:questionnaire_id].present?
       @questions = Question.where(questionnaire_id: params[:questionnaire_id])
+    elsif params[:questionnaire_ids].present?
+      @questions = Question.where(questionnaire_id: params[:questionnaire_ids])
     else
       @questions = Question.all
     end

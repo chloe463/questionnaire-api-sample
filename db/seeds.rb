@@ -19,7 +19,8 @@
     question = Question.create({
       questionnaire: questionnaire,
       text: "Question.#{question_id}",
-      type_cd: (question_id % 4 != 0) ? question_id % 4 : 4,
+      type_cd: question_id % 4,
+      # type_cd: (question_id % 4 != 0) ? question_id % 4 : 4,
       required: true,
     })
     p question

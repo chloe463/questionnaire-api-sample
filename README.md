@@ -1,24 +1,13 @@
-# README
+# questionnaire-api-sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このリポジトリは[技術書展 8](https://techbookfest.org/event/tbf08)で  頒布した Wantedly Tech Book 8 に掲載した「GraphQL を使ったアプリケーション開
+発でやったほうがよいこと」で触れているサンプルアプリケーションの API サーバーです。
 
-Things you may want to cover:
+GraphQL サーバーは [questionnaire-graphql-sample](https://github.com/chloe463/questionnaire-graphql-sample)、 フロントエンドのアプリケーションは [questionnaire-front-sample](https://github.com/chloe463/questionnaire-frontend-sample) をご参照ください。
 
-* Ruby version
+## Get started
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ bundle
+$ bundle exec rails s -b 0.0.0.0
+```

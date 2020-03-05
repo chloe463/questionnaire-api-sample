@@ -26,6 +26,8 @@ class QuestionnairesController < ApplicationController
 
   # PATCH/PUT /questionnaires/1
   def update
+    # NOTE: 無意味なsleepだが、フロントエンドでの optimisticResponse の効果を知るために残している
+    sleep 2
     if @questionnaire.update(questionnaire_params)
       render json: @questionnaire
     else
@@ -46,6 +48,6 @@ class QuestionnairesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def questionnaire_params
-      params.fetch(:questionnaire, {})
+      params.fetch(:questionnaire, {}).permit(:title, :description)
     end
 end

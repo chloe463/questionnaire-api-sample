@@ -39,6 +39,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "annotate", "~> 2.7"
+  gem "pry-byebug", "~> 3.8"
 end
 
 
@@ -48,3 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "simple_enum", "~> 2.3"
 
 gem "active_model_serializers", "~> 0.10.10"
+
